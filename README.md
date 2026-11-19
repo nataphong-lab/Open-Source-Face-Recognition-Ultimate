@@ -1,4 +1,4 @@
-# Open Source Face Recognition SDK
+# Ultimate Open Source Face Recognition SDK
 
 <p align="center">
   <img src="images/me.jpg" alt="Open Source Face Recognition SDK" width="600"/>
@@ -14,9 +14,10 @@
   Built with deep learning technology, featuring face detection, facial landmarks, feature extraction, and face similarity comparison.
 </p>
 
-<p align="center">
-  <strong>Improved Recognition Accuracy Through Model Training and Optimization from (Faceplugin)[https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK]'s open source face recognition model</strong>
-</p>
+<strong>
+  Improved Recognition Accuracy Through Further Training and Optimization of
+  <a href="https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK" target="_blank">FacePlugin's Open-Source Face Recognition Model</a>
+</strong>
 
 ---
 
