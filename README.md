@@ -76,7 +76,7 @@ cd Open-Source-Face-Recognition-Ultimate
 Run the following command from the repository directory:
 
 ```powershell
-winget install --id Python.Python.3.13 -e --source winget
+winget install --id Python.Python.3.9 -e --source winget
 powershell -Ep Bypass ./install.ps1
 ```
 
