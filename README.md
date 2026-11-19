@@ -168,6 +168,6 @@ This SDK is ideal for various applications:
 
 ---
 ### 📞 Get in Touch
-- **Email**: [info@faceplugin.com](mailto:info@faceplugin.com)
+- **Email**: [nataphong-lab](mailto:nataphong-lab@gmail.com)
 
 ---
