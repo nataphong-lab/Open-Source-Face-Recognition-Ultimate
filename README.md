@@ -272,40 +272,25 @@ Your contributions help us:
 
 You can support this project using **Tether (USDT)** through either of the following networks.
 
-#### USDT (TRC-20) – Tron Network
+#### BTC – Native SegWit
 
 <p align="center">
-  <strong>TRC-20 Wallet Address</strong>
+  <strong>Bitcoin - Native SebWit</strong>
 </p>
 
 ```text
-YOUR_TRC20_WALLET_ADDRESS
+bc1q56qk4sdxkjtcleatvjt9pqt0ckwc5cfd43rkv4
 ```
 
-#### USDT (ERC-20) – Ethereum Network
+#### – Ethereum Network
 
 <p align="center">
-  <strong>ERC-20 Wallet Address</strong>
+  <strong>ETH Wallet Address</strong>
 </p>
 
 ```text
-YOUR_ERC20_WALLET_ADDRESS
+0xfdaDfA238408bACCfA89CC12f5E37D19888cc34E
 ```
-
-⚠️ **Important Donation Notice**
-
-- Select the correct network before sending USDT.
-- TRC-20 donations must be sent through the Tron network.
-- ERC-20 donations must be sent through the Ethereum network.
-- Always verify the wallet address before confirming a transaction.
-- Sending funds through an unsupported network may result in permanent loss of funds.
-
-Every contribution, no matter how small, is greatly appreciated!
-
-<p align="center">
-  <strong>Thank you for supporting open-source development! ❤️</strong>
-</p>
-
 ---
 
 ## 📞 Get in Touch
