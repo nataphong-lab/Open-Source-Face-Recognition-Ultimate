@@ -3,7 +3,7 @@
   
   # Open Source Face Recognition SDK
   
-  **The world's first completely free and top #1 open-source face recognition SDK for Windows and Linux and I trained [FacePlugin](https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK) base model to improve the accuracy**
+  **The world's first completely free and top #1 open-source face recognition SDK for Windows and Linux and I trained [FacePlugin]'s(https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK) model to improve the accuracy**
 
   **The Result is Amazing!!!**
   
