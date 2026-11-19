@@ -1,37 +1,53 @@
-<div align="center">
-  <img alt="Open Source Face Recognition" src="images/me.jpg" width="600"/>
-  
-  # Open Source Face Recognition SDK
-  
-  **The world's first completely free and top #1 open-source face recognition SDK for Windows and Linux and I trained [FacePlugin](https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK)'s model to improve the accuracy**
+# Open Source Face Recognition SDK
 
-  **The Result is Amazing!!!**
-  
-</div>
+<p align="center">
+  <img src="images/me.jpg" alt="Open Source Face Recognition SDK" width="600"/>
+</p>
+
+<h1 align="center">Open Source Face Recognition SDK</h1>
+
+<p align="center">
+  <strong>A Free, Privacy-Focused Face Recognition Solution for Windows and Linux</strong>
+</p>
+
+<p align="center">
+  Built with deep learning technology, featuring face detection, facial landmarks, feature extraction, and face similarity comparison.
+</p>
+
+<p align="center">
+  <strong>Improved Recognition Accuracy Through Model Training and Optimization.</strong>
+</p>
 
 ---
 
 ## 🚀 Overview
 
-The **Open Source Face Recognition SDK** is the most powerful, privacy-focused solution for integrating face recognition capabilities into your applications. Built with deep learning models, this SDK provides high-accuracy face detection and recognition while ensuring complete data privacy through on-premise processing.
+The **Open Source Face Recognition SDK** is a free, privacy-focused solution designed to integrate face recognition capabilities into applications running on Windows and Linux.
+
+Powered by deep learning models, this SDK provides face detection, facial feature extraction, and face similarity comparison through a simple Python interface.
+
+The recognition model has been further trained using FacePlugin's model as a starting point to improve recognition accuracy.
+
+**Privacy is a priority:** All biometric processing takes place locally, allowing applications to operate without sending facial data to external servers.
 
 ### ✨ Key Features
 
-- 🔒 **100% On-Premise**: All processing happens locally - no data leaves your device
-- 🎯 **High Accuracy**: Powered by state-of-the-art deep learning models
-- ⚡ **Real-Time Processing**: Fast face detection and recognition capabilities
-- 🔧 **Easy Integration**: Simple Python APIs for seamless development
-- 🌐 **Cross-Platform**: Compatible with Windows and Linux systems
-- 📱 **GPU Optional**: Works efficiently on CPU-only systems
-- 🆓 **Completely Free**: Open source with no licensing fees
+- 🔒 **100% On-Premise Processing:** All face recognition operations run locally. No biometric data needs to leave your device.
+- 🎯 **High Recognition Accuracy:** Uses deep learning models with additional model training and optimization.
+- ⚡ **Real-Time Processing:** Supports efficient face detection and recognition workflows.
+- 🔧 **Easy Integration:** Simple Python APIs for application development.
+- 🌐 **Cross-Platform:** Supports Windows and Linux.
+- 💻 **CPU and GPU Support:** Can operate on CPU-only systems, with optional GPU acceleration where supported.
+- 🆓 **Completely Free:** Open source with no SDK licensing fees.
 
 ### 🎯 Current Capabilities
 
-- Face detection and bounding box extraction
-- Facial landmark detection
-- Feature embedding generation
-- Face similarity comparison
-- Support for multiple image formats (JPG, PNG, etc.)
+- Face detection and bounding box extraction.
+- Facial landmark detection.
+- Facial feature embedding generation.
+- Face similarity comparison.
+- Multiple face detection within a single image.
+- Support for common image formats, including JPG, PNG, BMP, and TIFF.
 
 ---
 
@@ -39,42 +55,56 @@ The **Open Source Face Recognition SDK** is the most powerful, privacy-focused s
 
 ### Prerequisites
 
-- **Python 3.9 or higher**
-- **Anaconda** (recommended for dependency management)
-- **Windows or Linux** operating system
+Before installing the SDK, make sure you have:
 
-### Setup Instructions
-1. **Setup Test environment** 
-   ```bash
-   powershell -Ep Bypass ./install.ps1
-   ```
-2. **Create and activate conda environment**
-   ```bash
+- Python 3.9 or higher.
+- Anaconda or Miniconda (recommended).
+- Windows or Linux operating system.
+- Git (recommended).
 
-   conda create -n facesdk python=3.9
-   conda activate facesdk
-   ```
+### 1. Clone the Repository
 
-3. **Install Anaconda** (if not already installed)
-   ```bash
-   # Download from: https://www.anaconda.com/products/distribution
-   ```
+```bash
+git clone https://github.com/nataphong-lab/Open-Source-Face-Recognition-Ultimate.git
 
-4. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+cd Open-Source-Face-Recognition-Ultimate
+```
 
-5. **Test the installation**
-   ```bash
-   python run.py
-   ```
+### 2. Run the Environment Setup Script 
+
+Run the following command from the repository directory:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+### 3. Create and Activate a Conda Environment
+
+```bash
+conda create -n facesdk python=3.9 -y
+
+conda activate facesdk
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Application
+
+```bash
+python run.py
+```
 
 ---
 
 ## 📖 Quick Start
 
 ### Basic Usage
+
+The following example demonstrates how to initialize the SDK, process an image, and retrieve facial information.
 
 ```python
 from face_recognition_sdk import FaceRecognition
@@ -84,32 +114,62 @@ face_sdk = FaceRecognition()
 
 # Process an image
 image_path = "path/to/your/image.jpg"
-face_info = face_sdk.GetImageInfo(image_path, faceMaxCount=10)
 
-# Compare two faces
-similarity = face_sdk.get_similarity(feature1, feature2)
+face_info = face_sdk.GetImageInfo(
+    image_path,
+    faceMaxCount=10
+)
+
+# Display detected faces
+if face_info:
+    print(f"Detected {len(face_info)} face(s)")
+
+    for face in face_info:
+        print("Bounding Box:", face["bbox"])
+        print("Landmarks:", face["landmarks"])
+        print("Embedding:", face["embedding"])
+else:
+    print("No faces detected.")
 ```
 
 ### Example: Face Comparison
 
+Compare two facial images and calculate their similarity score.
+
 ```python
-# Compare two images
+from face_recognition_sdk import FaceRecognition
+
+# Initialize the SDK
+face_sdk = FaceRecognition()
+
+# Input images
 image1 = "test/1.jpg"
 image2 = "test/2.png"
 
-# Get face information from both images
+# Extract facial information
 faces1 = face_sdk.GetImageInfo(image1, faceMaxCount=1)
 faces2 = face_sdk.GetImageInfo(image2, faceMaxCount=1)
 
+# Compare facial embeddings
 if faces1 and faces2:
-    # Compare the first face from each image
-    similarity = face_sdk.get_similarity(faces1[0]['embedding'], faces2[0]['embedding'])
+
+    feature1 = faces1[0]["embedding"]
+    feature2 = faces2[0]["embedding"]
+
+    similarity = face_sdk.get_similarity(feature1, feature2)
+
     print(f"Similarity: {similarity}%")
-    
-    # Check if it's the same person (threshold = 75)
+
+    # Example threshold: 75
     is_same_person = similarity >= 75
-    print(f"Same person: {is_same_person}")
+
+    print(f"Same Person: {is_same_person}")
+
+else:
+    print("Unable to detect a face in one or both images.")
 ```
+
+**Note:** The similarity threshold of 75 is an example configuration. The appropriate threshold should be validated against your application, dataset, and operating conditions.
 
 ---
 
@@ -117,58 +177,146 @@ if faces1 and faces2:
 
 ### Core Functions
 
+#### `FaceRecognition()`
+
+Initializes the face recognition SDK.
+
+```python
+face_sdk = FaceRecognition()
+```
+
 #### `GetImageInfo(image_path, faceMaxCount)`
-Extracts face information from an image.
+
+Detects faces in an image and extracts facial information.
 
 **Parameters:**
-- `image_path` (str): Path to the input image
-- `faceMaxCount` (int): Maximum number of faces to detect
+
+| Parameter | Type | Description |
+|---|---|---|
+| `image_path` | `str` | Path to the input image. |
+| `faceMaxCount` | `int` | Maximum number of faces to detect. |
 
 **Returns:**
-- List of dictionaries containing:
-  - `bbox`: Face bounding box coordinates
-  - `landmarks`: Facial landmark points
-  - `embedding`: Feature embedding vector
+
+A list of dictionaries containing facial information:
+
+| Field | Description |
+|---|---|
+| `bbox` | Face bounding box coordinates. |
+| `landmarks` | Facial landmark coordinates. |
+| `embedding` | Extracted facial feature embedding. |
 
 #### `get_similarity(feature1, feature2)`
-Compares two face feature embeddings.
+
+Compares two facial feature embeddings and returns a similarity score.
 
 **Parameters:**
-- `feature1` (array): First face embedding
-- `feature2` (array): Second face embedding
+
+| Parameter | Type | Description |
+|---|---|---|
+| `feature1` | `array` | First facial feature embedding. |
+| `feature2` | `array` | Second facial feature embedding. |
 
 **Returns:**
-- Similarity score (0-100), where higher values indicate greater similarity
+
+A similarity score between 0 and 100, where higher values indicate greater similarity.
 
 ### Configuration
 
-- **Default Threshold**: 75 (for determining if two faces belong to the same person)
-- **Supported Formats**: JPG, PNG, BMP, TIFF
-- **Face Detection**: Automatic detection of multiple faces per image
+| Configuration | Value |
+|---|---|
+| Default similarity threshold | 75 (example) |
+| Supported image formats | JPG, PNG, BMP, TIFF |
+| Face detection | Multiple face detection |
+| Processing | On-premise |
+| Supported operating systems | Windows and Linux |
 
 ---
 
 ## 🎯 Use Cases
 
-This SDK is ideal for various applications:
+The SDK can be integrated into a wide range of applications.
 
 ### 🔐 Security & Authentication
-- **Access Control Systems**: Secure entry points with face recognition
-- **User Authentication**: Biometric login for applications
-- **Surveillance**: Real-time monitoring and alerting
+
+- **Access Control Systems:** Face-based access control and identity verification.
+- **User Authentication:** Biometric authentication for applications.
+- **Security Monitoring:** Face detection and recognition workflows.
 
 ### 👥 Business Applications
-- **Time & Attendance**: Automated employee check-in/check-out
-- **Customer Analytics**: Retail customer tracking and analytics
-- **Smart Offices**: Automated visitor management
+
+- **Time & Attendance:** Automated employee check-in and check-out.
+- **Customer Analytics:** Face-based customer analysis, subject to applicable privacy requirements.
+- **Smart Offices:** Visitor identification and management.
 
 ### 📱 Mobile & IoT
-- **Smart Devices**: Integration with IoT devices
-- **Mobile Apps**: Face recognition in mobile applications
-- **Augmented Reality**: AR applications with facial recognition
+
+- **Smart Devices:** Face recognition integration for connected devices.
+- **Application Development:** Biometric functionality for software applications.
+- **Augmented Reality:** Face detection and facial landmark applications.
 
 ---
-### 📞 Get in Touch
-- **Email**: [nataphong-lab](mailto:nataphong-lab@gmail.com)
+
+## 💖 Support This Project
+
+If you find this **Open Source Face Recognition SDK** useful, please consider supporting its development with a donation.
+
+Your contributions help us:
+
+- 🚀 Improve face recognition accuracy and performance.
+- 🔧 Develop new features and improve existing functionality.
+- 💻 Maintain compatibility with Windows and Linux.
+- 🌱 Keep this project free and open source.
+
+### 💰 Donate with USDT
+
+You can support this project using **Tether (USDT)** through either of the following networks.
+
+#### USDT (TRC-20) – Tron Network
+
+<p align="center">
+  <strong>TRC-20 Wallet Address</strong>
+</p>
+
+```text
+YOUR_TRC20_WALLET_ADDRESS
+```
+
+#### USDT (ERC-20) – Ethereum Network
+
+<p align="center">
+  <strong>ERC-20 Wallet Address</strong>
+</p>
+
+```text
+YOUR_ERC20_WALLET_ADDRESS
+```
+
+⚠️ **Important Donation Notice**
+
+- Select the correct network before sending USDT.
+- TRC-20 donations must be sent through the Tron network.
+- ERC-20 donations must be sent through the Ethereum network.
+- Always verify the wallet address before confirming a transaction.
+- Sending funds through an unsupported network may result in permanent loss of funds.
+
+Every contribution, no matter how small, is greatly appreciated!
+
+<p align="center">
+  <strong>Thank you for supporting open-source development! ❤️</strong>
+</p>
 
 ---
+
+## 📞 Get in Touch
+
+For questions, suggestions, collaboration, or technical support:
+
+- **Email:** [nataphong-lab@gmail.com](mailto:nataphong-lab@gmail.com)
+- **GitHub:** [nataphong-lab](https://github.com/nataphong-lab)
+
+---
+
+<p align="center">
+  <strong>Built for developers. Powered by AI. Open for everyone. ❤️</strong>
+</p>
