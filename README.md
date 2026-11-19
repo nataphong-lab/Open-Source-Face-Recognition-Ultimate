@@ -75,7 +75,7 @@ cd Open-Source-Face-Recognition-Ultimate
 Run the following command from the repository directory:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install.ps1
+powershell -Ep Bypass ./install.ps1
 ```
 
 ### 3. Create and Activate a Conda Environment
