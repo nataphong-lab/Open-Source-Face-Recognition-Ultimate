@@ -1,9 +1,9 @@
 <div align="center">
-  <img alt="Open Source Face Recognition" src="" width="400"/>
+  <img alt="Open Source Face Recognition" src="images/me.jpg" width="600"/>
   
   # Open Source Face Recognition SDK
   
-  **The world's first completely free and top #1 open-source face recognition SDK for Windows and Linux and I trained [FacePlugin]'s(https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK) model to improve the accuracy**
+  **The world's first completely free and top #1 open-source face recognition SDK for Windows and Linux and I trained [FacePlugin](https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK)'s model to improve the accuracy**
 
   **The Result is Amazing!!!**
   
