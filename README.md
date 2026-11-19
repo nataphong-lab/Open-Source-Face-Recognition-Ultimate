@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <strong>Improved Recognition Accuracy Through Model Training and Optimization.</strong>
+  <strong>Improved Recognition Accuracy Through Model Training and Optimization from (Faceplugin)[https://github.com/Faceplugin-ltd/Open-Source-Face-Recognition-SDK]'s open source face recognition model</strong>
 </p>
 
 ---
@@ -282,7 +282,7 @@ You can support this project using **Tether (USDT)** through either of the follo
 bc1q56qk4sdxkjtcleatvjt9pqt0ckwc5cfd43rkv4
 ```
 
-#### – Ethereum Network
+#### Ethereum
 
 <p align="center">
   <strong>ETH Wallet Address</strong>
