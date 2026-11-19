@@ -71,11 +71,12 @@ git clone https://github.com/nataphong-lab/Open-Source-Face-Recognition-Ultimate
 cd Open-Source-Face-Recognition-Ultimate
 ```
 
-### 2. Run the Environment Setup Script 
+### 2. Install Python and Environment
 
 Run the following command from the repository directory:
 
 ```powershell
+winget install --id Python.Python.3.13 -e --source winget
 powershell -Ep Bypass ./install.ps1
 ```
 
