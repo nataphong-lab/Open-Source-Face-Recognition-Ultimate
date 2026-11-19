@@ -276,42 +276,6 @@ The SDK can be integrated into a wide range of applications.
 
 ---
 
-## 💖 Support This Project
-
-If you find this **Open Source Face Recognition SDK** useful, please consider supporting its development with a donation.
-
-Your contributions help us:
-
-- 🚀 Improve face recognition accuracy and performance.
-- 🔧 Develop new features and improve existing functionality.
-- 💻 Maintain compatibility with Windows and Linux.
-- 🌱 Keep this project free and open source.
-
-### 💰 Donate with USDT
-
-You can support this project using **Tether (USDT)** through either of the following networks.
-
-#### BTC – Native SegWit
-
-<p align="center">
-  <strong>Bitcoin - Native SebWit</strong>
-</p>
-
-```text
-bc1q56qk4sdxkjtcleatvjt9pqt0ckwc5cfd43rkv4
-```
-
-#### Ethereum
-
-<p align="center">
-  <strong>ETH Wallet Address</strong>
-</p>
-
-```text
-0xfdaDfA238408bACCfA89CC12f5E37D19888cc34E
-```
----
-
 ## 📞 Get in Touch
 
 For questions, suggestions, collaboration, or technical support:
