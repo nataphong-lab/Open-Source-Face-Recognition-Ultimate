@@ -45,8 +45,9 @@ The **Open Source Face Recognition SDK** is the most powerful, privacy-focused s
 
 ### Setup Instructions
 1. **Setup Test environment** 
-powershell -Ep Bypass ./install.ps1
-
+   ```bash
+   powershell -Ep Bypass ./install.ps1
+   ```
 2. **Create and activate conda environment**
    ```bash
 
