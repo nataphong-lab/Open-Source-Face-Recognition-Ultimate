@@ -71,7 +71,7 @@ git clone https://github.com/nataphong-lab/Open-Source-Face-Recognition-Ultimate
 cd Open-Source-Face-Recognition-Ultimate
 ```
 
-### 2. Install Python and Environment
+### 2. Install Python and Necessary Environment
 
 Run the following command from the repository directory:
 
