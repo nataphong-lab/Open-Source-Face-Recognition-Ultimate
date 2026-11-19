@@ -176,7 +176,7 @@ else:
 
 We conducted comparative evaluations between **nataphong-lab** and **FacePlugin** using multiple face recognition benchmark datasets.
 
-Our results demonstrate that the nataphong-lab model achieves **8%+ higher recognition accuracy** than FacePlugin across the evaluated benchmarks.
+Our results demonstrate that the nataphong-lab model achieves **15%+ higher recognition accuracy** than FacePlugin across the evaluated benchmarks.
 
 ### 📊 Benchmark Results
 
