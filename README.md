@@ -301,7 +301,3 @@ For questions, suggestions, collaboration, or technical support:
 - **GitHub:** [nataphong-lab](https://github.com/nataphong-lab)
 
 ---
-
-<p align="center">
-  <strong>Built for developers. Powered by AI. Open for everyone. ❤️</strong>
-</p>
