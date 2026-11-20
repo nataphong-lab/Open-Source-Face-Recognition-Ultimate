@@ -1,7 +1,7 @@
 # Ultimate Open Source Face Recognition SDK
 
 <p align="center">
-  <img src="images/me.jpg" alt="Open Source Face Recognition SDK" width="600"/>
+  <img src="images/me.jpg" alt="Open Source Face Recognition SDK" width="400"/>
 </p>
 
 <h1 align="center">Open Source Face Recognition SDK</h1>
